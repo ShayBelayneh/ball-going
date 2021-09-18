@@ -1,0 +1,348 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.233);
+}
+
+
+
+nav{
+    width: 100%;
+    height: 9vh;
+    background-color: black;
+    position: relative;
+    position: fixed;
+    z-index: 3;
+}
+
+ul{
+    position: absolute;
+    left: 65%;
+    direction: rtl;
+    
+}
+
+li{
+    display: inline-block;
+    padding: 15px;
+    transition: background-color 0.5s;
+}
+
+li:hover{
+    background-color: gray;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+
+
+h1{
+    /* position: absolute; */
+    color: white;
+    /* left: 2%; */
+    font-size: xx-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    padding: 9px 0 0 20px;
+
+}
+
+img{
+    width: 50%;
+    height: 55vh;
+    margin-left: 25%;
+    animation-name: imageslide;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    transition: width 1s ,height 1s ;
+    position: relative;
+}
+
+img:hover{
+    width: 40% ;
+    height: 45vh;
+}
+
+@keyframes imageslide{
+    0%{        
+
+    }
+    25%{        
+        right: 100%;
+    }
+    50%{        
+        right: 80%;
+    }
+    75%{        
+        right: 50%;
+    }
+    100%{        
+        right: 20%;
+    }
+}
+
+p{
+    text-align: center;
+    animation-name: paraDown;
+    animation-duration: 3s;
+    position: relative;
+    animation-timing-function: linear;
+}
+
+@keyframes paraDown{
+    0%{
+       
+    }
+    25%{
+        /* transform: translateY(20%); */
+        bottom: 100%;
+        
+        
+    }
+    50%{
+        /* transform: translateY(50%); */
+        bottom: 80%;
+    }
+    75%{
+        /* transform: translateY(75%); */
+        bottom: 50%;
+    }
+
+    100%{
+        /* transform: translateY(100%); */
+        bottom: 20%;
+        
+    }
+
+}
+
+#symbols{
+    width: 100%;
+    height: 20vh;
+    background-color: brown;
+    position: relative;
+}
+
+#circle , #rightArrow  ,#leftArrow {
+    background-color: white ; 
+    width: 10%;
+    height: 20vh;
+    display: inline-block;
+    position: absolute;
+   
+
+    
+}
+
+#circle{
+    left: 45%;
+    border-radius: 50%;
+}
+
+#rightArrow{
+    left: 75%;
+    width: 0;
+    height: 0;
+
+    background-color: transparent;
+
+    border-top: 70px solid transparent  ;
+    border-left: 95px solid  white;
+    border-bottom: 70px solid transparent;
+
+}
+
+#rightArrow::before{
+    content: '';
+    /* width: 0;
+    height: 0; */
+    position: relative;
+    bottom: 8px;
+    right: 220px;
+    border-top: 25px solid white  ;
+    border-bottom: 25px solid white ;
+    border-left: 70px solid  white;
+    border-right: 70px solid white;
+    
+}
+
+#leftArrow{
+    left: 18%;
+    width: 0;
+    height: 0;
+
+    background-color: transparent;
+    
+    border-top: 70px solid transparent  ;
+    border-right: 95px solid  white;
+    border-bottom: 70px solid transparent;
+}
+
+#leftArrow::before{
+    content: '';
+    position: relative;
+    bottom: 8px;
+    left: 70px;
+    border-top: 25px solid white  ;
+    border-bottom: 25px solid white ;
+    border-left: 70px solid  white;
+    border-right: 70px solid white;
+    
+}
+
+
+
+ /* #rightArrow:before{
+    content: ' \21D2';
+
+}  */
+
+#container{
+    width: 100%;
+    height: 75vh;
+    /* background-color: aqua; */
+    padding: 15px;
+    
+}
+
+#secondElement,#thirdElement,#fourthElement{
+    margin: 10px;
+}
+    
+
+#firstElement{
+    width: 9% ;
+    height: 15vh;
+    background-color: greenyellow;
+    border-radius: 50%;
+    margin: 0 10px 10px 10px;
+    animation-name: movingObject1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+@keyframes movingObject1{
+
+    0%{
+        
+    }
+    25%{
+        margin-left: 20% ;
+    }
+    50%{
+        margin-left: 60% ;
+    }
+    100%{
+        margin-left: 90% ;
+    }
+   
+
+}
+
+
+
+
+
+#secondElement{
+    width: 9% ;
+    height: 15vh;
+    background-color: blueviolet;
+    border-radius: 50%;
+    animation-name: movingObject2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+
+@keyframes movingObject2{
+
+    0%{
+        
+    }
+    25%{
+        margin-left: 20% ;
+    }
+    50%{
+        margin-left: 60% ;
+    }
+    100%{
+        margin-left: 90% ;
+    }
+   
+
+}
+
+#thirdElement{
+    width: 9% ;
+    height: 15vh;
+    background-color: brown;
+    border-radius: 50%;
+    animation-name: movingObject3;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+
+@keyframes movingObject3{
+
+    0%{
+        
+    }
+    25%{
+        margin-left: 20% ;
+    }
+    50%{
+        margin-left: 60% ;
+    }
+    100%{
+        margin-left: 90% ;
+    }
+   
+
+}
+
+
+#fourthElement{
+    width: 9% ;
+    height: 15vh;
+    background-color: seagreen;
+    border-radius: 50%;
+    animation-name: movingObject4;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+
+@keyframes movingObject4{
+
+    0%{
+        
+    }
+    25%{
+        margin-left: 20% ;
+    }
+    50%{
+        margin-left: 60% ;
+    }
+    100%{
+        margin-left: 90% ;
+    }
+   
+
+}
